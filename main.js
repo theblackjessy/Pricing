@@ -1,25 +1,30 @@
-let checkBox = document.querySelector('#selector-bar');
-let Monthly = document.querySelectorAll('h3');
-let Yearly = document.querySelectorAll('h4');
-let anual =  document.querySelectorAll('.anual')
+let checkBox = document.querySelector('input');
+let prices = document.querySelectorAll('.price');
 
 
+function checkBoxClick(){
+    prices.forEach( price => price.classList.toggle("hide"))
+    console.log('clicked');
+}
 
-checkBox.addEventListener("click", function(){
-    if(checkBox.checked){
-        Yearly.forEach(price => price.style.display = 'none');
-        Monthly.forEach(price => price.style.display = 'flex');
-        checkBox.style.justifyContent = "flex-end";
+checkBox.addEventListener("click", checkBoxClick);
+
+// checkBox.addEventListener("click", function(){
+//     if(checkBox.checked){
+//         Yearly.forEach(price => price.style.display = 'none');
+//         Monthly.forEach(price => price.style.display = 'flex');
+//         checkBox.style.justifyContent = "flex-end";
         
-    } else {
-        Yearly.forEach(price => price.style.display = 'flex');
-        Monthly.forEach(price => price.style.display = 'none');
-        checkBox.style.justifyContent = "flex-start";
-        anual.forEach(anual => anual.style.color = 'hsl(237, 63%, 64%)');
         
-    } 
+//     } else {
+//         Yearly.forEach(price => price.style.display = 'flex');
+//         Monthly.forEach(price => price.style.display = 'none');
+//         checkBox.style.justifyContent = "flex-start";
+        
+        
+//     } 
 
-});
+// });
 
 // const button = document.getElementById("selector-bar");
 // button.addEventListener("click", myFunction);

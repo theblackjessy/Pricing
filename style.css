@@ -47,22 +47,72 @@ h2 {
 h3 {
     font-size:5rem;
     padding: 1rem 3rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     
 }
+.hide {
 
-h4 {
-    font-size: 5rem;
-    padding: 1rem 3rem; 
     display:none;
-
 }
 
+h4.price{
+    font-size: 5rem;
+    padding: 1rem 3rem; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 p {
     font-size: 1.7rem;
     text-align: center;
 }
 
+input{
+    height:0;
+    width: 0;
+    visibility: hidden;
+}
 
+
+label{
+    width: 100px;
+    height: 60px;
+    background-color: rgb(88, 88, 239);
+    display: block;
+    border-radius: 70%;
+    cursor:pointer;
+    position: relative;
+    bottom:5px;
+    right:80px;
+    border-radius: 70px;
+}
+
+label:after{
+    content:"";
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 35px;
+    height:35px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked + label{
+    background-color: rgb(88, 88, 239);
+}
+
+input:checked + label:after{
+    left: calc(100% -10px);
+    transform: translateX(-100%);
+}
+
+label:active:after{
+    width: 35px;
+}
 .selector {
     display: flex;
     color: hsl(234, 14%, 74%);
@@ -83,24 +133,14 @@ p {
     cursor: pointer
 }
 
-#selector-ball {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: white;
-    border-radius: 50%;
-    transition-duration: 5000;
-}
-
-#selector-bar:hover {
-    opacity: 0.6;
-}
 
 #cards {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    height:80%;
+    width: 50%;
+    height:50%;
+    padding-top: 20px;
     margin: 2rem auto;
     text-align: center;
 }
