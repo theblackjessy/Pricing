@@ -74,8 +74,6 @@ input{
     width: 0;
     visibility: hidden;
 }
-
-
 label{
     width: 100px;
     height: 60px;
@@ -85,8 +83,14 @@ label{
     cursor:pointer;
     position: relative;
     bottom:5px;
-    right:80px;
+    right:50px;
     border-radius: 70px;
+}
+nav{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 label:after{
@@ -123,13 +127,10 @@ label:active:after{
 #selector-bar {
     background-color: hsl(237, 63%, 64%);
     width: 3.5rem;
-    height: 2rem;
+    /* height: 2rem; */
     margin: 0 1.5rem;
     padding: 0.1rem;
     border-radius: 15px;
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
     cursor: pointer
 }
 
@@ -216,18 +217,50 @@ button:hover{
 
 @media only screen and (max-width: 760px){
     #cards {
-        flex-direction: column;
-        
+        flex-direction: column;        
     }
+    
+#cards {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height:50%;
+    padding-top: 20px;
+    margin: 2rem auto;
+}
     .card-left , .card-middle , .card-right {
         margin: 1rem;
         border-radius: 10px;
-        width: 90%
-    }
-    h3,h4{
-        font-size: 3rem;
-        padding: 0.6rem 1.5rem;
-        
-    }
+        width: 100%;
+        padding: 3rem;
     
+    }
+    h3, h4.price{
+        font-size: 4rem;
+        padding: 0.6rem 1.5rem;
+    }
+   h2{
+     font-size: 25px;
+     color: rgb(10, 10, 69);
+   }
+
+   label{
+    width: 40px;
+    height: 25px;
+    
+}
+label:after{
+
+    width: 18px;
+    height:18px;
+    top: 4px;
+    right: 4px;
+}
+.selector{
+    padding-left:10px;
+}
+h2 {
+    padding-left: 0px;
+}
+
 }
